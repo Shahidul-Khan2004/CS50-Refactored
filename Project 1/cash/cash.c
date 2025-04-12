@@ -1,4 +1,3 @@
-#include <cs50.h>
 #include <stdio.h>
 
 int main(void)
@@ -6,9 +5,10 @@ int main(void)
     // take a valid input
     int change;
     int coins = 0;
+    printf("Cash owed: ");
     do
     {
-        change = get_int("Cash owed: ");
+        scanf("%d", &change);
     }
     while (change < 0);
     // return the least number of coins
@@ -32,5 +32,5 @@ int main(void)
         change = change - 1;
         coins++;
     }
-    printf("Change owed: %i \n", coins);
+    printf("Change owed: %d \n", coins);
 }
